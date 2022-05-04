@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width-device-width">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=
+        Josefin+Sans:wght@300&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img class="icon" src="imagenes/icono.png"> </h1>
+                <h2>Encriptador</h2>
+            </div>
+        </header>
+
+        <main>
+            
+            <ul class="principal">
+                <p>&#9888 Escriba solamente letras minúsculas y sin acento.</p>
+                <div id="imagenBuscar">
+                    <img class="mensaje-no-encontrado" src="imagenes/mensaje-no-encontrado.png">
+                </div>
+                <li>
+                    <h2>Ingrese el texto aqui:</h2>
+                    <textarea name="input-text" id="texto-entrada" cols="30" rows="20" class="texto-entrada" 
+                    placeholder="Ingrese el texto que desea desencriptar" required></textarea>
+                    <input type="button" class="buttonEncriptar"  value="Encriptar" id="encriptar-mensaje" onclick="esconderImagen()">
+                    
+                </li>
+                <li>
+                    <h2>Texto desencriptado</h2>
+                    <input class="texto-desencriptado" type="text" id="desencriptado" readonly="readonly" required></input>
+                    <input type="button" class="buttonDesencriptar"  value="Desencriptar" id="desencriptar-mensaje" onclick="exconderImagen()">
+                    <input type="button" value="Copiar" id="copiar" class="boton">
+                </li>
+            </ul>
+        </main>
+
+        <footer>
+            <img class="imagen-footer" src="imagenes/alura-imagen.png">
+            <p class="copyright">&copy Copyright Encriptador Alura - 2022</p>
+            <p>Diseñado por Andrea Hernández</p>
+        </footer>
+
+    </body>
+
+</html>
+
+
+
+<script src="js/principal.js"></script>

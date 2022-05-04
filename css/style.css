@@ -1,0 +1,142 @@
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header{
+    background-color: #BBBBBB ;
+    padding: 20px 0;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto; 
+}
+
+
+nav{
+    position: absolute;
+    top: 170px;
+    
+}
+
+.icon{
+    width: 5%;
+    transition: 400ms;
+    box-shadow: 10px 10px 15px #000000;
+}
+
+h2{ 
+    margin: 20px auto;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+p{
+    margin: 10px 0px 20px 10px;
+    font-size: 22px;
+}
+
+.principal{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px; 
+}
+
+.principal li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.principal li:hover{
+    border-color: #92aeeb;
+ }
+
+.principal li:active{
+    border-color: #088c19;
+}
+
+.principal h2{
+    text-align: center;
+    font-size:  30px;
+    font-weight: bold;
+    
+}
+
+#desencriptado {
+    width: 230px;
+    height: 300px;
+    margin: 0 0 3px;
+}
+
+.mensaje-no-encontrado{
+    width: 280px;
+    float: right;
+    margin: 0 20px 20px 0;
+}
+
+.buttonEncriptar, .buttonDesencriptar, .boton {
+    width: 48%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #0a3871;
+    border: none;   
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.encriptar:hover, .desencriptar:hover{
+    background: #4d64cd;
+    transform: scale(1.005);
+}
+/*css para Footer*/
+footer{
+    text-align: center;
+    background: linear-gradient(45deg,#A8AAD2, #4d64cd );
+    /*background: url();*/
+    padding: 40px;
+}
+
+.imagen-footer{
+    width: 20%;
+    transition: 400ms;
+    box-shadow: 10px 10px 15px #000000;
+}
+
+.copyright{
+    color: black;
+    font-size: 13px;
+    margin: 20px;
+}
+
+@media screen and (max-width:480px){
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .caja, .principal{
+        width: auto;
+    }
+
+    #traducido, .mensaje-no-encontrado, .imagen-footer{
+        width: 100%;
+    }
+}
+
