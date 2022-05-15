@@ -3,7 +3,7 @@ body{
 }
 
 header{
-    background-color: #BBBBBB ;
+    background-color: #7f76d1 ;
     padding: 20px 0;
 }
 
@@ -36,14 +36,22 @@ h2{
 }
 
 p{
-    margin: 10px 0px 20px 10px;
+    margin: 10px 10px 20px 10px;
     font-size: 22px;
+}
+
+.fondo  {
+    background: url('../imagenes/blue.jpg');
+    background-size: cover;
+    transition: 400ms;
 }
 
 .principal{
     width: 940px;
     margin: 0 auto;
     padding: 50px; 
+    
+    
 }
 
 .principal li{
