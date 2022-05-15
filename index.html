@@ -23,24 +23,25 @@
             </div>
         </header>
 
-        <main>
+        <main class="fondo">
             
             <ul class="principal">
+                
                 <p>&#9888 Escriba solamente letras minúsculas y sin acento.</p>
                 <div id="imagenBuscar">
                     <img class="mensaje-no-encontrado" src="imagenes/mensaje-no-encontrado.png">
                 </div>
                 <li>
                     <h2>Ingrese el texto aqui:</h2>
-                    <textarea name="input-text" id="texto-entrada" cols="30" rows="20" class="texto-entrada" 
-                    placeholder="Ingrese el texto que desea desencriptar" required></textarea>
+                    <textarea name="input-text" id="textoEntrada" cols="30" rows="20" class="texto-entrada" 
+                    placeholder="Ingrese el texto que desea encriptar" required></textarea>
                     <input type="button" class="buttonEncriptar"  value="Encriptar" id="encriptar-mensaje" onclick="esconderImagen()">
                     
                 </li>
                 <li>
                     <h2>Texto desencriptado</h2>
                     <input class="texto-desencriptado" type="text" id="desencriptado" readonly="readonly" required></input>
-                    <input type="button" class="buttonDesencriptar"  value="Desencriptar" id="desencriptar-mensaje" onclick="exconderImagen()">
+                    <input type="button" class="buttonDesencriptar"  value="Desencriptar" id="desencriptar-mensaje" onclick="esconderImagen()">
                     <input type="button" value="Copiar" id="copiar" class="boton">
                 </li>
             </ul>

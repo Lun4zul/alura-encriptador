@@ -5,7 +5,6 @@
 //La letra "o" es convertida para "ober"
 //La letra "u" es convertida para "ufat"
 
-
 var encriptarMensaje = document.querySelector("#encriptar-mensaje");
 encriptarMensaje.addEventListener("click",function(event){
     event.preventDefault();
@@ -29,26 +28,38 @@ botonCopiar.addEventListener("click",function(event){
     alert("El texto desencriptado ha sido copiado al portapapeles");
 });
 
-function esconderImagen() {
+
+// Validar texto
+textoEntrada.addEventListener('keyup', () => { 
+    textoEntrada.value = validarTexto(textoEntrada);
+});
+
+const validarTexto = (textoEntrada) => {
+    return  textoEntrada.value.toLowerCase().replace(/[áàâã]/g, 'a').replace(/[éèê]/g, 'e').replace(/[íìî]/g, 'i').replace(/[óòôõ]/g, 'o').replace(/[úùû]/g, 'u');
+  }
+
+
+//Esconder imagen
+  function esconderImagen() {
     var x = document.getElementById('imagenBuscar');
-    if (x.style.display === 'none') {
-      x.style.display = 'block';
+    if (x.style.display === 'block') {
+      x.style.display = 'none';
     } else {
       x.style.display = 'none';
     }
   }
 
-function leerTextoArea(){
+//función para leer el texto de entrada
+  function leerTextoArea(){
+    var textoLeido = document.querySelector("#textoEntrada");
     esconderImagen;
-    var textoLeido = document.querySelector("#texto-entrada");
-    
     return textoLeido.value;
 }
 
 function escribirTexto(texto){
     document.querySelector("#desencriptado").value = "";
     document.querySelector("#desencriptado").value = texto;
-    esconderImagen;
+    
 }
 
 function copiarTexto(){
@@ -57,7 +68,7 @@ function copiarTexto(){
     document.execCommand('copy');
 }
 
-function encriptarMensajeEntrada(texto){
+  function encriptarMensajeEntrada(texto){
     var textoNormal = texto.split(''); 
     for (i = 0; i < textoNormal.length; i++) {
         if (textoNormal[i] == "e") {
@@ -77,6 +88,7 @@ function encriptarMensajeEntrada(texto){
         }
     }
     return textoNormal.join('');      
+ 
 }
 
 function desencriptarTexto(texto){
